@@ -16,3 +16,69 @@ Conversão de [USD, United States Dollar] para [BRL, Brazilian Real]
 
 Última atualização: "Tue, 05 Nov 2024 00:00:01 +0000"
 ------------------------------------------------------
+------------------------------------------------------
+Conversão de [UYU, Uruguayan Peso] para [BRL, Brazilian Real]
+10,00 UYU ===============> 1,41 BRL
+
+Última atualização: "Tue, 05 Nov 2024 00:00:01 +0000"
+------------------------------------------------------
+------------------------------------------------------
+Conversão de [SSP, South Sudanese Pound] para [BRL, Brazilian Real]
+10,00 SSP ===============> 0,02 BRL
+
+Última atualização: "Tue, 19 Nov 2024 00:00:02 +0000"
+------------------------------------------------------
+------------------------------------------------------
+Conversão de Brazilian Real para Japanese Yen
+10,00 BRL ===============> 268,18 JPY
+
+Última atualização: Tue, 19 Nov 2024 00:00:02 +0000
+------------------------------------------------------
+------------------------------------------------------
+Conversão de Zimbabwean Dollar para Brazilian Real
+1,00 ZWL ===============> 1,10 BRL
+
+Última atualização: Tue, 19 Nov 2024 00:00:02 +0000
+------------------------------------------------------
+------------------------------------------------------
+Conversão de Brazilian Real para United States Dollar
+1,00 BRL ===============> 0,17 USD
+
+Última atualização: Tue, 19 Nov 2024 00:00:02 +0000
+------------------------------------------------------
+------------------------------------------------------
+Conversão de Brazilian Real para United States Dollar
+1,00 BRL ===============> 0,17 USD
+
+Última atualização: Tue, 19 Nov 2024 00:00:02 +0000
+------------------------------------------------------
+------------------------------------------------------
+Conversão de United States Dollar para Brazilian Real
+1,00 USD ===============> 5,79 BRL
+
+Última atualização: Tue, 19 Nov 2024 00:00:02 +0000
+------------------------------------------------------
+------------------------------------------------------
+Conversão de Brazilian Real para Japanese Yen
+20,00 BRL ===============> 536,35 JPY
+
+Última atualização: Tue, 19 Nov 2024 00:00:02 +0000
+------------------------------------------------------
+------------------------------------------------------
+Conversão de UAE Dirham para Egyptian Pound
+10000,00 AED ===============> 134508,00 EGP
+
+Última atualização: Tue, 19 Nov 2024 00:00:02 +0000
+------------------------------------------------------
+------------------------------------------------------
+Conversão de Brazilian Real para United States Dollar
+1000,00 BRL ===============> 1000,00 USD
+
+Última atualização: Tue, 19 Nov 2024 00:00:02 +0000
+------------------------------------------------------
+------------------------------------------------------
+Conversão de United States Dollar para Brazilian Real
+10,00 USD ===============> 57,88 BRL
+
+Última atualização: Tue, 19 Nov 2024 00:00:02 +0000
+------------------------------------------------------

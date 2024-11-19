@@ -1,9 +1,15 @@
+package aplicacao.leitores;
+
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+import com.google.gson.JsonObject;
+
 import java.io.*;
 
 public class Arquivo {
-    public static void escrita(File nomeDoArquivo, String conteudo) throws IOException {
+    public static void escreverArquivo(File nomeDoArquivo, String conteudo) throws IOException {
         if (nomeDoArquivo.exists()) {
-            String conteudoLido = leitura(nomeDoArquivo);
+            String conteudoLido = lerArquivo(nomeDoArquivo);
             BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(nomeDoArquivo));
             bufferedWriter.write(conteudoLido + System.lineSeparator() + conteudo);
             bufferedWriter.close();
@@ -14,7 +20,7 @@ public class Arquivo {
         }
     }
 
-    public static String leitura(File nomeDoArquivo) throws IOException {
+    public static String lerArquivo(File nomeDoArquivo) throws IOException {
         BufferedReader bufferedReader = new BufferedReader(new FileReader(nomeDoArquivo));
         StringBuilder stringBuilder = new StringBuilder();
         String line;
@@ -27,4 +33,16 @@ public class Arquivo {
 
         return String.valueOf(stringBuilder).trim();
     }
+
+    public static JsonObject getJsonData(String nomeDoArquivo) throws IOException {
+        Gson gson = new GsonBuilder().setPrettyPrinting().create();
+
+        return gson.fromJson(new FileReader(nomeDoArquivo), JsonObject.class);
+    }
+
+    public static int getJsonSize(String nomeDoArquivo) throws IOException {
+        return getJsonData(nomeDoArquivo).size();
+    }
+
+
 }
