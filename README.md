@@ -1,7 +1,7 @@
 <h1 align="center">Challenge Conversor de Moedas</h1>
 
 <p align="center">
-<img loading="lazy" src="http://img.shields.io/static/v1?label=STATUS&message=NAO%20FINALIZADO&color=FF0000&style=for-the-badge"/>
+<img loading="lazy" src="http://img.shields.io/static/v1?label=STATUS&message=FINALIZADO&color=00FF00&style=for-the-badge"/>
 </p>
 
 # Índice 
@@ -27,6 +27,10 @@ Gson é uma biblioteca do Java que pode ser usava para converter Objetos Java em
 O JDK é um ambiente de desenvolvimento para construção de aplicações que usa a linguagem Java.
 - A versão que foi utilizada neste projeto foi a **jdk-17.0.12** e pode ser encontrado no site da [**Oracle**](https://www.oracle.com/java/technologies/javase/jdk17-archive-downloads.html).
 
+## ExchangeRate API-KEY
+ExchangeRate é uma API que fornece informações atualizadas sobre cotações em formato JSON através de requisições. 
+- Para conseguir uma chave de forma gratuita, basta criar sua conta no [**ExchangeRate-API**](https://www.exchangerate-api.com/) e seguir o passo a passo.
+- Após conseguir a chave, mude o valor do atributo da classe *Cotacao("/src/Cotacao.java")* e coloque sua chave da API.
 ## Intellij Community Edition (Opcional)
 O projeto foi feito inteiramente no [**Intellij Community Edition IDE**](https://www.jetbrains.com/pt-br/idea/download/?section=windows), mas seu é totalmente opcional.
 
@@ -124,7 +128,5 @@ O código possui alguns tratamentos de erros, mas não é garantido que ele func
 ```
 git clone https://github.com/soldier42/conversor-de-moedas
 ```
-
-2. Certifique de que todas os [requisitos](#requisitos) estejam instalados.
-
+2. Certifique de que todas os [requisitos](#requisitos) estejam certos e instalados.
 3. Execute e compile o código.
