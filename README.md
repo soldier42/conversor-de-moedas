@@ -40,6 +40,72 @@ uso da [**Exchange Rate - API**](https://www.exchangerate-api.com/) para base de
     É possível conferir as moedas que tem suporte através da [**documentação**](https://www.exchangerate-api.com/docs/supported-currencies) da API.
 
 # Demonstração da Aplicação
+A aplicação é intuitiva, portanto basta que o usuário siga as instruções do terminal. Eis um exemplo abaixo:
+```
+Digite o índice da ação que deseja fazer:
+
+1) Converter moeda
+2) Histórico de conversões
+0) Sair
+------------------------------------------------------
+
+>>> 1
+```
+```
+Digite o índice da moeda que deverá ser convertida:
+
+1) [BRL, Brazilian Real]
+2) [USD, United States Dollar]
+3) [EUR, Euro]
+4) [UYU, Uruguayan Peso]
+5) [AUD, Australian Dollar]
+6) [CNY, Chinese Renminbi]
+7) [CAD, Canadian Dollar]
+8) [JPY, Japanese Yen]
+
+0) Listar todas as moedas que possuem suporte da API
+------------------------------------------------------
+
+>>> 1
+Brazilian Real selecionado!
+```
+
+```
+Agora digite para qual moeda o valor deverá convertido: 
+
+1) [BRL, Brazilian Real]
+2) [USD, United States Dollar]
+3) [EUR, Euro]
+4) [UYU, Uruguayan Peso]
+5) [AUD, Australian Dollar]
+6) [CNY, Chinese Renminbi]
+7) [CAD, Canadian Dollar]
+8) [JPY, Japanese Yen]
+
+0) Mostrar todas as moedas que possui suporte da API
+------------------------------------------------------
+
+>>> 2
+United States Dollar selecionado!
+```
+
+```
+Digite a quantia que você deseja converter:
+------------------------------------------------------
+
+>>> 10000
+```
+
+```
+Conversão de Brazilian Real para United States Dollar
+10000,00 BRL ===============> 1732,00 USD
+
+Última atualização da cotação: Wed, 20 Nov 2024 00:00:01 +0000
+Consulta feita em: Wed Nov 20 16:34:19 BRT 2024
+```
+
+
+O [**vídeo completo**](https://youtu.be/iNFagFbpA-I) mostrando o uso da aplicação está disponível no YouTube.
 
 ## Observações
 Para bom funcionamento do código, é recomendado que:
@@ -48,14 +114,12 @@ Para bom funcionamento do código, é recomendado que:
 
 O código possui alguns tratamentos de erros, mas não é garantido que ele funcione como deva em qualquer situação.
 
-Ademais, basta seguir as instruções do terminal.
-
 # Tecnologias Utilizadas
 ![Java](https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white)
 ![IntelliJ IDEA](https://img.shields.io/badge/IntelliJIDEA-000000.svg?style=for-the-badge&logo=intellij-idea&logoColor=white)
 ![Git](https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white)
 
-# Uso da Aplicação
+# Acesso ao Projeto
 1. Clone este repositório:
 ```
 git clone https://github.com/soldier42/conversor-de-moedas

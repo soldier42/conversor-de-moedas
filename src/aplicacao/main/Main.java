@@ -96,6 +96,7 @@ public class Main {
                                     moedaBase = gson.fromJson(Cotacao.solicitarCotacao(Cotacao.getCodigoApiPorId(idMoedaBase)), Moeda.class);
                                     nomeMoedaBase = moedaBase.getNomeDaMoeda();
                                     System.out.printf("%s selecionado!%n", nomeMoedaBase);
+                                    Thread.sleep(1000);
                                     breakWhileEtapa1 = false;
 
                                 // Caso onde o usuário solicita uma moeda do arquivo JSON local.
@@ -104,6 +105,7 @@ public class Main {
                                     moedaBase = gson.fromJson(Cotacao.solicitarCotacao(Cotacao.getCodigoLocalPorId(idMoedaBase)), Moeda.class);
                                     nomeMoedaBase = moedaBase.getNomeDaMoeda();
                                     System.out.printf("%s selecionado!%n", nomeMoedaBase);
+                                    Thread.sleep(1000);
                                     breakWhileEtapa1 = false;
 
                                 } else {
@@ -153,7 +155,7 @@ public class Main {
                                     Cotacao.printMoedasApi(); // Printando todas as moedas suportadas pela API
                                     System.out.printf("""
                                             %nAgora escolha a moeda final: %n%n
-                                            ------------------------------------------------------%n
+                                            ------------------------------------------------------
                                             """);
                                     System.out.print(">>> ");
                                     idMoedaFinal = input.nextInt();
@@ -162,6 +164,7 @@ public class Main {
                                     moedaFinal = gson.fromJson(Cotacao.solicitarCotacao(Cotacao.getCodigoApiPorId(idMoedaFinal)), Moeda.class);
                                     nomeMoedaFinal = moedaFinal.getNomeDaMoeda();
                                     System.out.printf("%s selecionado!%n", nomeMoedaFinal);
+                                    Thread.sleep(1000);
 
                                     breakWhileEtapa2 = false;
 
@@ -171,6 +174,7 @@ public class Main {
                                     moedaFinal = gson.fromJson(Cotacao.solicitarCotacao(Cotacao.getCodigoLocalPorId(idMoedaFinal)), Moeda.class);
                                     nomeMoedaFinal = moedaFinal.getNomeDaMoeda();
                                     System.out.printf("%s selecionado!%n", nomeMoedaFinal);
+                                    Thread.sleep(1000);
 
                                     breakWhileEtapa2 = false;
                                 }
@@ -238,7 +242,7 @@ public class Main {
                         Arquivo.escreverArquivo(new File("log.txt"), conversaoFinal.substring(110));
                         System.out.println(conversaoFinal);
 
-                        Thread.sleep(1000);
+                        Thread.sleep(2500);
                         break;
 
                     case 2:
@@ -261,8 +265,10 @@ public class Main {
                                 System.out.println(s);
                             }
                         } else {
-                            System.out.println("Não há histórico para mostrar.\n");
+                            System.out.println("Não há histórico para mostrar");
                         }
+
+                        System.out.println();
                         break;
 
                     default:
