@@ -1,5 +1,6 @@
 ------------------------------------------------------
 Conversão de South Korean Won para Brazilian Real
+200,00 KRW ===============> 0,83 BRL
 
 Última atualização da cotação: Wed, 20 Nov 2024 00:00:01 +0000
 Consulta feita em: Wed Nov 20 02:42:54 BRT 2024
