@@ -1,10 +1,11 @@
-package aplicacao.leitores;
+package aplicacao.arquivos;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.JsonObject;
 
 import java.io.*;
+import java.util.ArrayList;
 import java.util.List;
 
 public class Arquivo {
@@ -22,18 +23,22 @@ public class Arquivo {
     }
 
     public static String lerArquivo(File nomeDoArquivo) throws IOException {
-        BufferedReader bufferedReader = new BufferedReader(new FileReader(nomeDoArquivo));
-        StringBuilder stringBuilder = new StringBuilder();
-        String line;
+        if (nomeDoArquivo.exists()) {
+            BufferedReader bufferedReader = new BufferedReader(new FileReader(nomeDoArquivo));
+            StringBuilder stringBuilder = new StringBuilder();
+            String line;
 
-        while ((line = bufferedReader.readLine()) != null) {
-            stringBuilder
-                    .append(line)
-                    .append(System.lineSeparator());
+            while ((line = bufferedReader.readLine()) != null) {
+                stringBuilder
+                        .append(line)
+                        .append(System.lineSeparator());
+            }
+            bufferedReader.close();
+
+            return String.valueOf(stringBuilder).trim();
         }
-        bufferedReader.close();
 
-        return String.valueOf(stringBuilder).trim();
+        return "O arquivo não existe!";
     }
 
     public static JsonObject getJsonData(String nomeDoArquivo) throws IOException {
@@ -46,9 +51,14 @@ public class Arquivo {
         return getJsonData(nomeDoArquivo).size();
     }
 
+    // método feito apenas para função de histórico de conversões
     public static List<String> lerArquivoParaLista(File nomeDoArquivo) throws FileNotFoundException {
-        BufferedReader bufferedReader = new BufferedReader(new FileReader(nomeDoArquivo));
+        if (nomeDoArquivo.exists()) {
+            BufferedReader bufferedReader = new BufferedReader(new FileReader(nomeDoArquivo));
+            return bufferedReader.lines().toList();
+        }
 
-        return bufferedReader.lines().toList();
+        // retorna uma arraylist vazia caso não exista arquivo log.txt(significa que o usuario não fez nenhuma conversão ainda)
+        return new ArrayList<>();
     }
 }

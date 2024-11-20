@@ -1,6 +1,6 @@
 package aplicacao.consultas;
 
-import aplicacao.leitores.Arquivo;
+import aplicacao.arquivos.Arquivo;
 import com.google.gson.*;
 
 import java.io.*;

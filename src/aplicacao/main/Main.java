@@ -1,7 +1,7 @@
 package aplicacao.main;
 
 import aplicacao.consultas.Cotacao;
-import aplicacao.leitores.Arquivo;
+import aplicacao.arquivos.Arquivo;
 import aplicacao.modelos.Moeda;
 import com.google.gson.Gson;
 import com.google.gson.JsonObject;
@@ -261,7 +261,7 @@ public class Main {
                                 System.out.println(s);
                             }
                         } else {
-                            System.out.println("Não há histórico para mostrar.");
+                            System.out.println("Não há histórico para mostrar.\n");
                         }
                         break;
 
@@ -281,8 +281,9 @@ public class Main {
                 input.next();
             // Exceção que cobre todos os outros erros que não foram tratados. IMPORTANTE tratar TODAS as exceções que não foram pensadas durante a implementação do código.
             } catch (Exception e) {
-                System.out.println("O seguinte erro abaixo não foi tratado, portanto, o programa irá se encerrar.");
-                System.out.println(e);
+                System.out.println("O seguinte erro abaixo não foi tratado, portanto, o programa irá se encerrar.\n" + e);
+                Thread.sleep(1000);
+                break;
             }
         }
     }

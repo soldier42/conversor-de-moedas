@@ -29,3 +29,5 @@ bin/
 .DS_Store
 
 .gitignore
+.log.txt
+.Debug
