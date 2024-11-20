@@ -1,7 +1,0 @@
-------------------------------------------------------
-Conversão de Brazilian Real para United States Dollar
-1,00 BRL ===============> 0,17 USD
-
-Última atualização da cotação: Wed, 20 Nov 2024 00:00:01 +0000
-Consulta feita em: Wed Nov 20 15:57:53 BRT 2024
-------------------------------------------------------
