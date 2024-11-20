@@ -7,7 +7,9 @@ import com.google.gson.Gson;
 import com.google.gson.JsonObject;
 
 import java.io.File;
+import java.util.Date;
 import java.util.InputMismatchException;
+import java.util.List;
 import java.util.Scanner;
 
 public class Main {
@@ -34,7 +36,7 @@ public class Main {
             Digite o índice da ação que deseja fazer:
 
             1) Converter moeda
-            2) Listar as últimas conversões
+            2) Histórico de conversões
             0) Sair
             ------------------------------------------------------%n
             """);
@@ -211,6 +213,7 @@ public class Main {
 
 
                         // Etapa 4
+                        Date data = new Date();
                         String conversaoFinal = """
                                         ------------------------------------------------------
                                         *                      Etapa 4                       *
@@ -218,7 +221,8 @@ public class Main {
                                         Conversão de %s para %s
                                         %.2f %s ===============> %.2f %s
                                         
-                                        Última atualização: %s
+                                        Última atualização da cotação: %s
+                                        Consulta feita em: %s
                                         ------------------------------------------------------
                                         """.formatted(
                                                 nomeMoedaBase,
@@ -227,7 +231,8 @@ public class Main {
                                                 moedaBase.getCodigo(),
                                                 moedaBase.compararMoedas(moedaFinal, valorAConverter),
                                                 moedaFinal.getCodigo(),
-                                                moedaBase.getUltimaAtualizacao()
+                                                moedaBase.getUltimaAtualizacao(),
+                                                data.toString()
                                                 );
                         // Arquivando a conversão em um arquivo de log txt.
                         Arquivo.escreverArquivo(new File("log.txt"), conversaoFinal.substring(110));
@@ -237,10 +242,28 @@ public class Main {
                         break;
 
                     case 2:
-                        System.out.println("Histórico de conversão!!!!!!!!!!!!!!");
-                        Arquivo.lerArquivo(new File("log.txt")).substring(60, -1);
-                        break;
+                        // Caso onde é mostrado o histórico de conversões
+                        List<String> l = Arquivo.lerArquivoParaLista(new File("log.txt"));
 
+                        System.out.printf("""
+                                ------------------------------------------------------
+                                *               Histórico de Conversões              *
+                                ------------------------------------------------------
+                                - Limitado a 10 consultas -
+                                ------------------------------------------------------%n
+                                """);
+                        if (l.size() >= 79) {
+                            for (int i = 0; i < 79; i++) {
+                                System.out.println(l.get(i));
+                            }
+                        } else if (!l.isEmpty()) {
+                            for (String s : l) {
+                                System.out.println(s);
+                            }
+                        } else {
+                            System.out.println("Não há histórico para mostrar.");
+                        }
+                        break;
 
                     default:
                         System.out.print("""

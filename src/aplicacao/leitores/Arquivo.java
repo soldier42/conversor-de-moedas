@@ -5,13 +5,14 @@ import com.google.gson.GsonBuilder;
 import com.google.gson.JsonObject;
 
 import java.io.*;
+import java.util.List;
 
 public class Arquivo {
     public static void escreverArquivo(File nomeDoArquivo, String conteudo) throws IOException {
         if (nomeDoArquivo.exists()) {
             String conteudoLido = lerArquivo(nomeDoArquivo);
             BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(nomeDoArquivo));
-            bufferedWriter.write(conteudoLido + System.lineSeparator() + conteudo);
+            bufferedWriter.write(conteudo + System.lineSeparator() + conteudoLido);
             bufferedWriter.close();
         } else {
             BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(nomeDoArquivo));
@@ -24,6 +25,7 @@ public class Arquivo {
         BufferedReader bufferedReader = new BufferedReader(new FileReader(nomeDoArquivo));
         StringBuilder stringBuilder = new StringBuilder();
         String line;
+
         while ((line = bufferedReader.readLine()) != null) {
             stringBuilder
                     .append(line)
@@ -44,5 +46,9 @@ public class Arquivo {
         return getJsonData(nomeDoArquivo).size();
     }
 
+    public static List<String> lerArquivoParaLista(File nomeDoArquivo) throws FileNotFoundException {
+        BufferedReader bufferedReader = new BufferedReader(new FileReader(nomeDoArquivo));
 
+        return bufferedReader.lines().toList();
+    }
 }
