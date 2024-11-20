@@ -11,6 +11,9 @@ import java.net.http.HttpResponse;
 import java.util.ArrayList;
 
 public class Cotacao {
+    // Atributos
+    private static final String apiKey = "COLOQUE SUA API KEY AQUI";
+
     // Métodos
     public static String getCodigoApiPorId(int id) throws IOException, InterruptedException {
         return String.valueOf(getMoedasApi().get(id - 1).get(0));
@@ -21,7 +24,6 @@ public class Cotacao {
     }
 
     public static ArrayList<ArrayList<String>> getMoedasApi() throws IOException, InterruptedException {
-        String apiKey = "a680026a55c17a0e0eec7a75";
         String link = "https://v6.exchangerate-api.com/v6/%s/codes".formatted(apiKey);
 
         HttpClient client = HttpClient.newHttpClient();
@@ -47,7 +49,6 @@ public class Cotacao {
     }
 
     public static String solicitarCotacao(String siglaDaMoeda) throws IOException, InterruptedException {
-        String apiKey = "a680026a55c17a0e0eec7a75";
         String link = "https://v6.exchangerate-api.com/v6/%s/latest/%s".formatted(apiKey, siglaDaMoeda);
 
         HttpClient client = HttpClient.newHttpClient();

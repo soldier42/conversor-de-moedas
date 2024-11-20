@@ -154,7 +154,7 @@ public class Main {
                                 if (idMoedaFinal == 0) {
                                     Cotacao.printMoedasApi(); // Printando todas as moedas suportadas pela API
                                     System.out.printf("""
-                                            %nAgora escolha a moeda final: %n%n
+                                            %nAgora escolha a moeda final: %n
                                             ------------------------------------------------------
                                             """);
                                     System.out.print(">>> ");
